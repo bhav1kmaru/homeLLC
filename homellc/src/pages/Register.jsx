@@ -59,7 +59,7 @@ export default function Register() {
       <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
         <Stack align={"center"}>
           <Image
-            height="150px"
+            height="100px"
             src="https://www.home.llc/guide/nikfiles/uploads/2021/07/homellc-Logo.png"
           />
           <Heading fontSize={"4xl"} textAlign={"center"}>
@@ -90,7 +90,7 @@ export default function Register() {
                 </FormControl>
               </Box>
               <Box>
-                <FormControl id="lastName">
+                <FormControl id="lastName" isRequired>
                   <FormLabel>Last Name</FormLabel>
                   <Input
                     value={userDetails.last_name}

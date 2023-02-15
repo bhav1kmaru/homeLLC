@@ -2,10 +2,11 @@ const express = require('express');
 const { UserModel } = require('../model/User.Model');
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
+const {validator}=require('../middleware/validator');
 
 const userRouter=express.Router()
 
-userRouter.post("/register", async (req, res) => {
+userRouter.post("/register",validator, async (req, res) => {
   const { first_name, last_name, email, password } = req.body;
   try {
     const userCheck = await UserModel.find({ email });
