@@ -38,6 +38,7 @@ import {
 import { IconType } from "react-icons";
 import { ReactText } from "react";
 import {AiOutlineSearch} from 'react-icons/ai'
+import { useSelector } from "react-redux";
 
 
 const LinkItems = [
@@ -49,6 +50,7 @@ const LinkItems = [
 export default function SideBarAndNavbar({
   children
 }) {
+  
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box minH="100vh" bg={useColorModeValue("gray.100", "gray.900")}>
@@ -147,6 +149,7 @@ const NavItem = ({ icon, children, ...rest }) => {
 
 
 const MobileNav = ({ onOpen, ...rest }) => {
+  const { first_name, last_name } = useSelector((store) => store.auth);
   return (
     <Flex
       ml={{ base: 0, md: 60 }}
@@ -209,7 +212,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
                   spacing="1px"
                   ml="2"
                 >
-                  <Text fontSize="sm">Justina Clark</Text>
+                  <Text fontSize="sm">{`${first_name} ${last_name}`}</Text>
                   <Text fontSize="xs" color="gray.600">
                     Admin
                   </Text>

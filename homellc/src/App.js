@@ -4,13 +4,14 @@ import SideBarAndNavbar from './components/SideBarAndNavbar';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import AllRoutes from './components/AllRoutes';
 
 function App() {
 
 
   return (
     <div>
-     <Register/>
+     <AllRoutes />
     </div>
   );
 }
