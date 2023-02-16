@@ -23,6 +23,10 @@
 
 ### Backend
 
+Create a .env file in the backend folder and enter your database url
+```env
+dbURL='your mongodb url'
+```
 Run the following commands to start the backend server
 ```sh 
 cd backend

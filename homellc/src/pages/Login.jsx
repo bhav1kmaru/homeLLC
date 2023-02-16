@@ -57,7 +57,7 @@ export default function Login() {
             height="100px"
             src="https://www.home.llc/guide/nikfiles/uploads/2021/07/homellc-Logo.png"
           />
-          <Heading fontSize={"4xl"}>Sign in to your account</Heading>
+          <Heading fontSize={"4xl"}>Login to your account</Heading>
           <Text style={{display:error?"block":"none"}} color='red'>Wrong Credentials, please enter correct details to login</Text>
         </Stack>
         <Box
@@ -111,7 +111,7 @@ export default function Login() {
                 }}
                 onClick={handleSubmit}
               >
-                Sign in
+                Login
               </Button>
             </Stack>
             <Stack pt={6}>
