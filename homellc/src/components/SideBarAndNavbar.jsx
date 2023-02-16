@@ -24,6 +24,8 @@ import {
   Image,
   Input,
   Button,
+  InputGroup,
+  InputRightElement,
 } from "@chakra-ui/react";
 import {
   FiHome,
@@ -40,6 +42,7 @@ import { ReactText } from "react";
 import {AiOutlineSearch} from 'react-icons/ai'
 import { useSelector,useDispatch } from "react-redux";
 import { logout } from "../redux/auth/auth.actions";
+import {SearchIcon} from '@chakra-ui/icons'
 
 
 const LinkItems = [
@@ -54,7 +57,7 @@ export default function SideBarAndNavbar({
   
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Box minH="100vh" bg={useColorModeValue("gray.100", "gray.900")}>
+    <Box minH="100vh" >
       <SidebarContent
         onClose={() => onClose}
         display={{ base: "none", md: "block" }}
@@ -99,14 +102,18 @@ const SidebarContent = ({ onClose, ...rest }) => {
         {/* <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
           Logo
         </Text> */}
-        <Image src='https://www.home.llc/guide/nikfiles/uploads/2021/07/homellc-Logo.png' />
+        <Image
+          src="https://www.home.llc/guide/nikfiles/uploads/2021/07/homellc-Logo.png"
+        />
         <CloseButton display={{ base: "flex", md: "none" }} onClick={onClose} />
       </Flex>
-      {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon}>
-          {link.name}
-        </NavItem>
-      ))}
+      <Box pt='200px'>
+        {LinkItems.map((link) => (
+          <NavItem key={link.name} icon={link.icon}>
+            {link.name}
+          </NavItem>
+        ))}
+      </Box>
     </Box>
   );
 };
@@ -175,10 +182,12 @@ const MobileNav = ({ onOpen, ...rest }) => {
         icon={<FiMenu />}
       />
       <Box style={{ display: "flex" }} width="30%">
-        <Input size="md" placeholder="Search" />
-        <Button style={{ backgroundColor: "#ef5373" }}>
-          <AiOutlineSearch />
-        </Button>
+        <InputGroup>
+          <Input size="md" placeholder="Search" />
+          <InputRightElement
+            children={<Button bgColor="#ef5373"><SearchIcon color='white' /></Button>}
+          />
+        </InputGroup>
       </Box>
 
       {/* <Text
@@ -187,6 +196,9 @@ const MobileNav = ({ onOpen, ...rest }) => {
         fontFamily="monospace"
         fontWeight="bold"
       >
+      <Button style={{ backgroundColor: "#ef5373" }}>
+              <AiOutlineSearch color='white' />
+            </Button>
         Logo
       </Text> */}
 
@@ -218,9 +230,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
               borderColor={useColorModeValue("gray.200", "gray.700")}
             >
               <MenuDivider />
-              <MenuItem onClick={handleLogout}>
-                Sign Out
-              </MenuItem>
+              <MenuItem onClick={handleLogout}>Sign Out</MenuItem>
             </MenuList>
           </Menu>
         </Flex>

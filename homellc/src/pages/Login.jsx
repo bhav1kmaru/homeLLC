@@ -103,6 +103,7 @@ export default function Login() {
                 <Link color={"blue.400"}>Forgot password?</Link>
               </Stack>
               <Button
+              isLoading={loading}
                 bg="#ef5373"
                 color={"white"}
                 _hover={{
