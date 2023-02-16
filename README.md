@@ -54,7 +54,8 @@ npm start
 ## Routes
 
 ### '/login' - Login/Sign In
-![image](https://user-images.githubusercontent.com/60300103/219318187-f2e1cdbf-16fc-434b-a91e-a71bc17af0cd.png)
+![image](https://user-images.githubusercontent.com/60300103/219324086-9c5bdab4-f361-4b88-bce4-2e5595343675.png)
+
 
 ### '/register' - Register/Sign Up
 ![image](https://user-images.githubusercontent.com/60300103/219318353-1e89ced2-d2df-4b8a-9e11-eda22949b636.png)
