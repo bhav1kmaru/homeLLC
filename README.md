@@ -18,7 +18,7 @@
 
 ## Getting Started
 ### Folder Structure
-image.png
+![image](https://user-images.githubusercontent.com/60300103/219317830-b7267fc3-5be6-448a-b3d9-0ca571e2db20.png)
 
 
 ### Backend
@@ -48,5 +48,14 @@ npm start
 * All routes are present in the components folder.
 
 ## Routes
+
+### '/login' - Login/Sign In
+![image](https://user-images.githubusercontent.com/60300103/219318187-f2e1cdbf-16fc-434b-a91e-a71bc17af0cd.png)
+
+### '/register' - Register/Sign Up
+![image](https://user-images.githubusercontent.com/60300103/219318353-1e89ced2-d2df-4b8a-9e11-eda22949b636.png)
+
+### '/' - Home (Protected Route: Can only be visited if authenticated)
+![image](https://user-images.githubusercontent.com/60300103/219318650-221c3e30-aefc-4783-a609-515cbdb3e980.png)
 
 
